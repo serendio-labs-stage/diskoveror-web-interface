@@ -64,7 +64,8 @@ The input to the diskoveror text analytics modules.
 ##### Example:
 
 >        inputtext=”This sentence is given for example. Bill Gates is a co-founder of Microsoft”
-The RestAPI on being called (by passing the input text to it) with a GET request returns a structur
+
+The RestAPI on being called (by passing the input text to it) with a GET request returns a structure
 
 
 ### Starting the web-interface application

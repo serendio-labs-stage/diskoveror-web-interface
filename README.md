@@ -71,8 +71,10 @@ The RestAPI on being called (by passing the input text to it) with a GET request
 #### Installing Playframework
 [Follow the tutorial on the official website](https://www.playframework.com/documentation/2.4.x/Installing)
 #### Starting the web-application from play
+![Starting web-app](/rsz_play1.png "Web Interface")
 
 ### Example RestAPI request
 
+>        curl -GET --data-urlencode "analysis=All" --data-urlencode "inputtext=$value" http://5.9.115.14:9000/api
 
 

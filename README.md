@@ -27,11 +27,11 @@ API :
 
 ##### Values compatible
 
->        All                   
->        Entities        
->        LSEntities 
->        Sentiment
->        Topics
+>        All (Gives an output with all of the features resolved by the engine)                  
+>        Entities (Output consists of only entities resolved from the input text)        
+>        LSEntities (Returns Life Science entities)
+>        Sentiment (Gives the overall sentiment of the input text)
+>        Topics (Returns the categories to which the input belongs to)
 
 ##### Example Usage:
 

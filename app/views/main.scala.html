@@ -26,7 +26,9 @@
 
        
          <style>
-			
+
+
+
 			.header{
 					background-image:url(@routes.Assets.at("images/expandsmall.png"));
 					background-repeat: no-repeat;
@@ -100,7 +102,9 @@
 							$("#l6cover").toggle();
 							$("#l7cover").toggle();
 							$("#l8cover").toggle();
-							
+                            $("#l9cover").toggle();
+                            $("#l10cover").toggle();
+                            $("#l11cover").toggle();
 							$( "#dialog" ).dialog({
 							      autoOpen: false,
 							      modal:true,
@@ -167,8 +171,21 @@
 								$("#l8cover").toggle(500);
 								$("#m8").toggleClass("imagechange");
 							});
-							
-							
+
+            $("#m9").click(function () {
+            $("#l9cover").toggle(500);
+            $("#m9").toggleClass("imagechange");
+            });
+
+            $("#m10").click(function () {
+            $("#l10cover").toggle(500);
+            $("#m10").toggleClass("imagechange");
+            });
+
+            $("#m11").click(function () {
+            $("#l11cover").toggle(500);
+            $("#m11").toggleClass("imagechange");
+            });
 							$(".mybutton").mouseover(function(){
 	
 								$(".mybutton").css("background-color","#EEF2F3");
@@ -205,8 +222,8 @@
 </script>
     </head>
     <body>
-  	
-     
+
+
      
     <div  style="margin-top:-20px;">   
     <br/><br/> 

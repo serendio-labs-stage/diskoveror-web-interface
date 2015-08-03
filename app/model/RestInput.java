@@ -29,22 +29,22 @@ public class RestInput
     }
     public void loadData()
     {
-       String[] analysisOptions = null;
-       String[] entityOptions = null;
+        String[] analysisOptions = null;
+        String[] entityOptions = null;
 
-       if(analysis != null)
-           analysisOptions = analysis.split(",");
+        if(analysis != null)
+            analysisOptions = analysis.split(",");
 
-       if(entities != null)
-           entityOptions = entities.split(",");
+        if(entities != null)
+            entityOptions = entities.split(",");
 
-       analysisSet = new TreeSet<String>();
-       entitiesSet = new TreeSet<String>();
+        analysisSet = new TreeSet<String>();
+        entitiesSet = new TreeSet<String>();
 
-       for(int i=0; analysisOptions != null && i < analysisOptions.length; i++)
-           analysisSet.add(analysisOptions[i]);
+        for(int i=0; analysisOptions != null && i < analysisOptions.length; i++)
+            analysisSet.add(analysisOptions[i]);
 
-       for(int i=0; entityOptions != null && i < entityOptions.length; i++)
-           entitiesSet.add(entityOptions[i]);
+        for(int i=0; entityOptions != null && i < entityOptions.length; i++)
+            entitiesSet.add(entityOptions[i]);
     }
 }

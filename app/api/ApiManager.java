@@ -2,7 +2,7 @@ package api;
 
 import com.diskoverorta.tamanager.TextManager;
 import com.diskoverorta.vo.TAConfig;
-import com.serendio.diskoverer.lifesciences.LSManager;
+//import com.serendio.diskoverer.lifesciences.LSManager;
 import model.RestInput;
 
 /**
@@ -32,22 +32,27 @@ public class ApiManager
         {
             for(String temp : res.analysisSet)
             {
+               // System.out.println(temp);
                 if(temp.equals("All") == true)
                 {
                     conf.analysisConfig.put("Entity", "TRUE");
                     conf.analysisConfig.put("LSEntity", "TRUE");
-                    conf.analysisConfig.put("Category", "TRUE");
+                    conf.analysisConfig.put("Topic", "TRUE");
                     conf.analysisConfig.put("Sentiment", "TRUE");
+                    conf.analysisConfig.put("Keyword", "TRUE");
+
 
                 }
                 if(temp.equals("Entity") == true)
                     conf.analysisConfig.put("Entity","TRUE");
                 if(temp.equals("LSEntity") == true)
                     conf.analysisConfig.put("LSEntity","TRUE");
-                if(temp.equals("Category") == true)
-                    conf.analysisConfig.put("Category","TRUE");
+                if(temp.equals("Topic") == true)
+                    conf.analysisConfig.put("Topic","TRUE");
                 if(temp.equals("Sentiment") == true)
                     conf.analysisConfig.put("Sentiment","TRUE");
+                if(temp.equals("Keyword") == true)
+                    conf.analysisConfig.put("Keyword","TRUE");
 
             }
         }
@@ -85,6 +90,11 @@ public class ApiManager
                 }
             }
         }
+
         return conf;
+
+
+
+
     }
 }

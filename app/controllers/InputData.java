@@ -56,7 +56,7 @@ public class InputData extends Controller
         Form<DataContent>boundForm = productForm.bindFromRequest();
         DataContent product = boundForm.get();
 
-        
+
         RestInput restIp = new RestInput();
         ApiManager api = new ApiManager();
 
@@ -72,52 +72,54 @@ public class InputData extends Controller
     }
 
     public static Result myAction() {
-      String[] postAction = request().body().asFormUrlEncoded().get("action");
-      if (postAction == null || postAction.length == 0) 
-      {
+        String[] postAction = request().body().asFormUrlEncoded().get("action");
+        if (postAction == null || postAction.length == 0)
+        {
+            return ok(json.render("{\"Error\":\"Try with valid input.\"}"));
+        }
+        else
+        {
+            String action = postAction[0];
+            if ("json".equals(action))
+            {
+                Form<DataContent>boundForm = productForm.bindFromRequest();
+                DataContent product = boundForm.get();
+
+
+                RestInput restIp = new RestInput();
+                ApiManager api = new ApiManager();
+
+                product.rawInput = product.rawInput.replace("\n","");
+                product.rawInput = product.rawInput.replace("\r","");
+                restIp.inputtext = product.rawInput;
+                restIp.analysisSet.add("All");
+                restIp.analysis = "All";
+                restIp.apiMode = true;
+                restIp.loadData();
+
+                return ok(json.render(api.retrieveTextAnalyticsOutput(restIp)));
+            }
+            else if ("analyze".equals(action))
+            {
+                Form<DataContent>boundForm = productForm.bindFromRequest();
+                DataContent product = boundForm.get();
+                RestInput restIp = new RestInput();
+                ApiManager api = new ApiManager();
+
+                product.rawInput = product.rawInput.replace("\n","");
+                product.rawInput = product.rawInput.replace("\r","");
+                restIp.inputtext = product.rawInput;
+                restIp.analysisSet.add("All");
+                restIp.analysis = "All";
+                restIp.apiMode = true;
+                restIp.loadData();
+
+
+
+                return ok(hello.render(api.retrieveTextAnalyticsOutput(restIp),restIp.inputtext));
+            }
+        }
         return ok(json.render("{\"Error\":\"Try with valid input.\"}"));
-      } 
-      else 
-      {
-        String action = postAction[0];
-        if ("json".equals(action)) 
-        {
-          Form<DataContent>boundForm = productForm.bindFromRequest();
-        DataContent product = boundForm.get();
-
-        
-        RestInput restIp = new RestInput();
-        ApiManager api = new ApiManager();
-
-        product.rawInput = product.rawInput.replace("\n","");
-        product.rawInput = product.rawInput.replace("\r","");
-        restIp.inputtext = product.rawInput;
-        restIp.analysisSet.add("All");
-        restIp.analysis = "All";
-        restIp.apiMode = true;
-        restIp.loadData();
-
-        return ok(json.render(api.retrieveTextAnalyticsOutput(restIp)));
-        } 
-        else if ("analyze".equals(action)) 
-        {
-          Form<DataContent>boundForm = productForm.bindFromRequest();
-        DataContent product = boundForm.get();
-        RestInput restIp = new RestInput();
-        ApiManager api = new ApiManager();
-
-        product.rawInput = product.rawInput.replace("\n","");
-        product.rawInput = product.rawInput.replace("\r","");
-        restIp.analysisSet.add("All");
-        restIp.analysis = "All";
-
-        restIp.inputtext = product.rawInput;
-
-
-        return ok(hello.render(api.retrieveTextAnalyticsOutput(restIp),restIp.inputtext));
-        } 
-      }
-      return ok(json.render("{\"Error\":\"Try with valid input.\"}"));
     }
 
     public static Result getLegalTAOutput()

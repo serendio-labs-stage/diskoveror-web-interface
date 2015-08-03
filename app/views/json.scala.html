@@ -9,9 +9,9 @@
     
     	$(document).ready(function(){
 
-    	//	 alert('The paragraph was clicked.');
+    		 //alert("The paragraph was clicked.");
     		 
-		
+
    
     	var series = @{Html(new Gson().toJson(name))};
     	
@@ -48,7 +48,7 @@
             <div class="large-2 columns">
               <p></p>
             </div>
-            <div class="large-2 column">
+            <!--<div class="large-2 column">
               <span><img src="@routes.Assets.at("images/home.png")" alt="" class="home icons"></span>
               <span><a href="">Home</a></span>
             </div>
@@ -63,7 +63,7 @@
             <div class="large-2 column">
               <span><img src="@routes.Assets.at("images/about.png")" alt="" class="about icons"></span>
               <span><a href="">About Us</a></span>
-            </div>
+            </div>-->
             <div class="large-2 columns">
               <p></p>
             </div>
@@ -84,7 +84,7 @@
               <p></p>
             </div>
             <div class="large-9 columns AEText">
-              Analytics Engine
+              Analytics Output
             </div>
           </div>
           <div class="row full-width">
@@ -96,69 +96,103 @@
                 <div class="nano-content">
                 <ul class="collapsibleList">
                 <li>
-                  <span class="entitySpan" onClick="revealDiv()"><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol collapsibleList" ></span>Entities
+                  <span class="entitySpan" onClick="revealDiv()"><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol collapsibleList" ></span>Entity_General
                     <ul class="entityListDiv" id="drop1" style="display:block;">
-                    <li id="m2" class="entityList header"><span style="padding-left:20px;">Person</span></li>
+                    <li id="m2" class="entityList header"><span style="padding-left:20px;">person</span></li>
                     <li>
                       <div id="l2cover">
-                        <ul id="person" style="padding-left:22px; font-size:12px;">
+                        <ul id="Person" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li>
-                    <li id="m3" class="entityList header"><span style="padding-left:20px;">Organization</span></li> 
+                    <li id="m3" class="entityList header"><span style="padding-left:20px;">organization</span></li>
                     <li>
                       <div id="l3cover">
-                        <ul id="organization" style="padding-left:22px; font-size:12px;">
+                        <ul id="Organization" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li>
-                    <li id="m4" class="entityList header"><span style="padding-left:20px;">Location</span></li>
+                    <li id="m4" class="entityList header"><span style="padding-left:20px;">location</span></li>
                     <li>
                       <div id="l4cover">
-                        <ul id="location" style="padding-left:22px; font-size:12px;">
+                        <ul id="Location" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li>    
-                    <li id="m5" class="entityList header"><span style="padding-left:20px;">Currency</span></li>
+                    <li id="m5" class="entityList header"><span style="padding-left:20px;">currency</span></li>
                     <li>
                       <div id="l5cover">
-                        <ul id="currency" style="padding-left:22px; font-size:12px;">
+                        <ul id="Currency" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li> 
-                    <li id="m6" class="entityList header"><span style="padding-left:20px;">Percent</span></li> 
+                    <li id="m6" class="entityList header"><span style="padding-left:20px;">percent</span></li>
                     <li>
                       <div id="l6cover">
-                        <ul id="percent" style="padding-left:22px; font-size:12px;">
+                        <ul id="Percent" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li>
-                    <li id="m7" class="entityList header"><span style="padding-left:20px;">Date</span></li> 
+                    <li id="m7" class="entityList header"><span style="padding-left:20px;">date</span></li>
                     <li>
                       <div id="l7cover">
-                        <ul id="date" style="padding-left:22px; font-size:12px;">
+                        <ul id="Date" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li>
-                    <li id="m8" class="entityList header"><span style="padding-left:20px;">Time</span></li>
+                    <li id="m8" class="entityList header"><span style="padding-left:20px;">time</span></li>
                     <li>
                       <div id="l8cover">
-                        <ul id="time" style="padding-left:22px; font-size:12px;">
+                        <ul id="Time" style="padding-left:22px; font-size:12px;">
                               
                         </ul>
                       </div>
                     </li> 
                     </ul>
-                </li>   
-                <li><span class="entitySpan"><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol"></span>Topics</li>
-                <li><span class="entitySpan"><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol"></span>Sentiments</li>
-                </li>   
+                </li>
+                    <li><span class="entitySpan" onClick="revealDiv()"><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol collapsibleList" ></span>Text_Information
+                        <ul class="entityListDiv" id="drop1" style="display:block;">
+                            <li id="m10" class="entityList header"><span style="padding-left:20px;">Topics</span></li>
+                            <li>
+                                <div id="l10cover" style="padding-top:5px; padding-bottom:5px;">
+                                    <ul id="topics" style="padding-left:22px; font-size:12px;">
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        <ul class="entityListDiv" id="drop1" style="display:block;">
+                            <li id="m9" class="entityList header"><span style="padding-left:20px;">Sentiment</span></li>
+                            <li>
+                                <div id="l9cover" style="padding-top:5px; padding-bottom:5px;">
+                                    <ul id="sentiment" style="padding-left:22px; font-size:12px;">
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+
+
+                        <ul class="entityListDiv" id="drop1" style="display:block;">
+                            <li id="m11" class="entityList header"><span style="padding-left:20px;">Keywords</span></li>
+                            <li>
+                                <div id="l11cover" style="padding-top:5px; padding-bottom:5px;">
+                                    <ul id="keywords" style="padding-left:22px; font-size:12px;">
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul> 
                 </div>
               </div>

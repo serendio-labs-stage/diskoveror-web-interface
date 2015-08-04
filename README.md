@@ -8,7 +8,6 @@ The engine at the backend is tied with a simple user-friendly front end.
 
 ![Diskoveror Web Interface](/diskoveror.jpg "Web Interface")
 
-
 ### RestAPI
 
 A HTTP based Rest API is supported in this package. It has the capability to extract the below data from any input text that is passed to it:

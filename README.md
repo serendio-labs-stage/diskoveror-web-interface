@@ -14,7 +14,6 @@ The engine at the backend is tied with a simple user-friendly front end.
 A HTTP based Rest API is supported in this package. It has the capability to extract the below data from any input text that is passed to it:
 
  * Basic Entities like Person,Organization etc.
- * Life Science based entities like Protein, Genes etc.
  * Topic Identification of given text.
  * Sentiment extraction of given text.
 
@@ -29,7 +28,6 @@ API :
 
 >        All (Gives an output with all of the features resolved by the engine)                  
 >        Entities (Output consists of only entities resolved from the input text)        
->        LSEntities (Returns Life Science entities)
 >        Sentiment (Gives the overall sentiment of the input text)
 >        Topics (Returns the categories to which the input belongs to)
 

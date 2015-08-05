@@ -22,7 +22,7 @@ A HTTP based Rest API is supported in this package. It has the capability to ext
 The components of a given text could be extracted by setting the below parameters and giving a post request to the 
 API :
 
->        analysis  - Extracts specific text analyics data from input text. (Mandatory)
+>        analysis  - Extracts specific text analytics data from input text. (Mandatory)
 
 ##### Values compatible
 

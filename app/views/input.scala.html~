@@ -212,7 +212,7 @@
             <!--<button type="submit" class="button secondary radius" value="json" name="action" style="padding: 5px 20px; font-size:15px; font-weight:300; font-weight:lighter;">JSON Output</button>-->
             
           </div>
-          <div class="large-3 columns" style="margin-left:290px;">
+          <div class="large-3 columns" style="margin-left:270px;">
             <button type="submit" class="button secondary radius" value="analyze" name="action" style="padding: 5px 20px; font-size:15px; font-weight:300; font-weight:lighter;">Analyze Now</button>
           </div>
           <div class="large-1 columns">

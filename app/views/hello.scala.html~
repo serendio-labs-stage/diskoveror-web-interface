@@ -786,16 +786,16 @@
                     </ul>
                 </li>   
                 <li><span class="entitySpan" onClick=""><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol collapsibleList" ></span>Topics
-                    <ul class="entityListDiv" id="drop1" style="display:block;">
+                   <!-- <ul class="entityListDiv" id="drop1" style="display:block;">
                         <li id="m10" class="entityList header"><span style="padding-left:20px;"></span></li>
                         <li>
-                            <div id="l10cover" style="padding-top:5px; padding-bottom:5px;">
+                            <div id="l10cover" style="padding-top:5px; padding-bottom:5px;">-->
                                 <ul id="topics" style="padding-left:22px; font-size:12px;">
 
                                 </ul>
-                            </div>
-                        </li>
-                    </ul>
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
                     </li>
 <li><span class="entitySpan" onClick=""><img src="@routes.Assets.at("images/add.png")" alt="" class="symbol collapsibleList" ></span>Sentiment
                     <ul class="entityListDiv" id="drop1" style="display:block;">

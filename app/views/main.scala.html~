@@ -217,17 +217,6 @@
 	      	{
 	      		document.getElementById("drop1").style.display = "block";
 	      	}
-
-var d = document.getElementById("drop2").style.display;
-	      	if(d == "block")
-	      	{
-	      		document.getElementById("drop2").style.display = "none";
-	      	}
-	      	else
-	      	{
-	      		document.getElementById("drop2").style.display = "block";
-	      	}
-
 	      }
 
 </script>

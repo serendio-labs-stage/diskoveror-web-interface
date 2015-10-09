@@ -74,6 +74,6 @@ The RestAPI on being called (by passing the input text to it) with a GET request
 
 ### Example RestAPI request
 
->        curl -GET --data-urlencode "analysis=All" --data-urlencode "inputtext=$value" http://5.9.115.14:9000/api
+>        curl -POST --data-urlencode "analysis=All" --data-urlencode "inputtext=$value" http://5.9.115.14:9000/api
 
 
